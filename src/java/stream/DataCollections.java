@@ -31,7 +31,7 @@ public class DataCollections {
         while (i < s.length()) {
             int j = s.offsetByCodePoints(i, 1);
             result.add(s.substring(i, j));
-            i=j;
+            i = j;
         }
         return result.stream();
     }

@@ -10,7 +10,7 @@ import java.util.stream.StreamSupport;
 
 import static stream.CreatingStream.show;
 
-public class Main {
+public class MainCreatingStream {
     public static void main(String[] args) {
 
 
@@ -21,23 +21,6 @@ public class Main {
         Iterator<Path> iterator = Paths.get("/src/java/stream").iterator();
         Stream<Path> pathComponents = StreamSupport.stream(Spliterators.spliteratorUnknownSize(iterator, Spliterator.ORDERED), false);
         show("pathComponents", pathComponents);
-
-        List<String> loremIpsum = DataCollections.getLoremIpsum();
-
-        Stream<Stream<String>> stream = loremIpsum.stream().map(DataCollections::codePoints);
-
-        stream.collect(Collectors.toList())
-                .forEach(s -> System.out.println(s.collect(Collectors.toList())));
-
-
-//        List<Stream<String>> collect = stream.collect(Collectors.toList());
-//                for (Stream result:collect) {
-//            System.out.println(result.collect(Collectors.toList()));
-//        }
-
-        List<String> stream1 = loremIpsum.stream().flatMap(DataCollections::codePoints)
-                .collect(Collectors.toList());
-        System.out.println(stream1);
 
     }
 }
