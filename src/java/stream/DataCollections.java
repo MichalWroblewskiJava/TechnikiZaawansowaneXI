@@ -18,6 +18,7 @@ public class DataCollections {
             "Phasellus at porttitor nulla. Curabitur placerat pulvinar dignissim. In sodales mauris at fringilla molestie. Phasellus at arcu a ligula interdum bibendum et vitae felis. Aenean id fringilla velit, eget mollis massa. Aliquam convallis ligula vitae enim consequat, porta maximus enim gravida. In sodales feugiat lectus, a feugiat orci lobortis eget. Cras ut pretium mi. Aenean elementum maximus diam, in hendrerit quam sagittis lobortis. Fusce vel elit ac eros tempor mollis at ut ex. " +
             "Quisque euismod lacus et augue luctus tristique. Vestibulum suscipit augue erat, id imperdiet eros fermentum quis. Quisque nulla felis, dictum eu ornare et, ornare quis magna. Phasellus a nibh dignissim ex rutrum suscipit quis vel tortor. Vivamus non risus faucibus elit luctus aliquet. Vestibulum imperdiet enim id tortor facilisis ullamcorper. In a egestas sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed commodo elit felis, non tincidunt mauris sagittis et. Vivamus bibendum tincidunt lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur et auctor felis.";
 
+
     public static List<String> getLoremIpsum() {
         return Arrays.asList(loremIpsum.split(" "));
     }

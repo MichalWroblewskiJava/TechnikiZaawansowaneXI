@@ -5,6 +5,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
+
 import static stream.DataCollections.codePoints;
 import static stream.DataCollections.getLoremIpsum;
 
@@ -28,6 +30,11 @@ public class MethodsFilterMapFlatMap {
         List<String> streamFlatMap = loremIpsum.stream().flatMap(DataCollections::codePoints)
                 .collect(Collectors.toList());
         System.out.println(streamFlatMap);
+
+        Stream<String> combine = Stream.concat(codePoints("Hello"), codePoints("World"));
+        List<String> collect = combine.collect(Collectors.toList());
+        System.out.println(collect);
+
 
     }
 }
