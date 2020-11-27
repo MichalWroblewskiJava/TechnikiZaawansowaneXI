@@ -39,5 +39,8 @@ public class OptionalExample {
         startsWithN.ifPresentOrElse(
                 v -> System.out.println("Znaleziono: " + v),
                 () -> logger.warn("Nic nie ma"));
+
+        Optional<String> transformed = startsWithN.map(String::toUpperCase);
+        System.out.println(transformed);
     }
 }
